@@ -10,8 +10,10 @@
     <?php if(!empty($questionCollection)):?>
         <?php foreach($questionCollection as $q): ?>
             <h3><?php echo $q['nickname'];?> asked:</h3>
-            <div class="col-sm-12"><div class="col-sm-1" style="color:#FF5252;"><strong><?php /* @escapeNotVerified */ echo __('Q:')?></strong></div><div class="col-sm-11" style="margin-left: 5px;"><?php echo $q['question'];?></div></div>
-            <div class="col-sm-12"><div class="col-sm-1" style="color:#388E3C;"><strong><?php /* @escapeNotVerified */ echo __('A:')?></strong></div><div class="col-sm-11" style="margin-left: 5px;"><?php echo $q['answer']; ?></div></div>
+            <div>
+                <div class="col-sm-12"><div class="col-sm-1" style="color:#FF5252"><strong><?php /* @escapeNotVerified */ echo __('Q:')?></strong></div><div class="col-sm-11" style="margin-left: 5px;"><?php echo $q['question'];?></div></div>
+                <div class="col-sm-12"><div class="col-sm-1" style="color:#388E3C"><strong><?php /* @escapeNotVerified */ echo __('A:')?></strong></div><div class="col-sm-11" style="margin-left: 5px;"><?php echo $q['answer']; ?></div></div>
+            </div>
             <hr/>
        <?php endforeach; ?>
    <?php endif ;?>
