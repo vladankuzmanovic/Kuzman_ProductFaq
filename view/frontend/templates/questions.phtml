@@ -4,16 +4,15 @@
  */
 ?>
 
-<div id="product-questions-container">
+<div style="margin-bottom:40px;" id="product-questions-container">
     <?php  $questionCollection = $block->getQuestionCollection(); ?>
-        <h1><?php /* @escapeNotVerified */ echo __('Frequently asked questions') ?> </h1>
     <?php if(!empty($questionCollection)):?>
         <?php foreach($questionCollection as $q): ?>
-            <h3><?php echo $q['nickname'];?> asked:</h3>
-            <div><strong><?php /* @escapeNotVerified */ echo __('Q:')?> </strong><?php echo $q['question'];?></div>
-            <div><strong><?php /* @escapeNotVerified */ echo __('A:')?> </strong><?php echo $q['answer']; ?></div>
+            <h3><?php echo $q['nickname']; ?> asked:</h3>
+            <div style="margin-top:10px;"><span style="color:#FF5252;"><strong><?php /* @escapeNotVerified */ echo __('Q:')?></strong></span><div style="margin-top:-17px; margin-left:35px;"><?php echo $q['question']; ?></div></div>
+            <div style="margin-top:20px;"><span style="color:#388E3C;"><strong><?php /* @escapeNotVerified */ echo __('A:')?></strong></span><div style="margin-top:-17px; margin-left:35px;"><?php echo $q['answer']; ?></div></div>
             <hr/>
        <?php endforeach; ?>
-   <?php endif ;?>
+   <?php endif; ?>
 </div>
 <?php echo $block->getChildHtml('question_form'); ?>
